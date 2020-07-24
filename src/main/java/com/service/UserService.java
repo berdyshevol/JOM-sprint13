@@ -10,7 +10,7 @@ public interface UserService {
     List<User> getAll();
     User getUserById(Long id);
     User createOrUpdateUser(User user);
-    List<User> getAllByRole(User.Role role);
+    List<User> getAllByRole(String role);
     boolean addUserToMarathon(User user, Marathon marathon);
     boolean addUserToTask(User user, Task task);
 }
