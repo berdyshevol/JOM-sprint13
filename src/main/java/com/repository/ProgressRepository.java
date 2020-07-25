@@ -9,8 +9,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ProgressRepository extends JpaRepository<Process, Long> {
-    Progress getProcessById(Long id);
+public interface ProgressRepository extends JpaRepository<Progress, Long> {
+    Progress getProgressById(Long id);
     Progress addTaskForStudent(Task task, User user); // !!
     Progress addOrUpdateProgress(Progress progress);
     boolean setStatus(Task task, Progress progress); // !!

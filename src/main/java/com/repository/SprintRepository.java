@@ -9,8 +9,5 @@ import java.util.List;
 
 @Repository
 public interface SprintRepository extends JpaRepository<Sprint, Long> {
-    List<Sprint> getSprintByMarathonId(Long id);
-    boolean addSprintToMarathon(Sprint sprint, Marathon marathon);
-    boolean updateSprint(Sprint sprint);
-    Sprint getSprintById(Long id);
+    List<Sprint> findByMarathon(Long id);
 }

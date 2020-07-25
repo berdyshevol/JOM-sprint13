@@ -1,5 +1,8 @@
 package com.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 import net.bytebuddy.build.ToStringPlugin;
 import org.hibernate.annotations.CreationTimestamp;
@@ -9,7 +12,10 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
-@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity(name="task")
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

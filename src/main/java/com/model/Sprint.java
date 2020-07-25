@@ -1,37 +1,34 @@
 package com.model;
 
-import lombok.Data;
-import lombok.ToString;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
+import lombok.*;
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.*;
 import java.time.LocalDate;
 import java.util.List;
 
 @Data
-@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity(name="sprint")
 public class Sprint {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @UpdateTimestamp
-    private LocalDate startDate;
-
-    @UpdateTimestamp // TODO: is it right?
+    @Column(columnDefinition = "DATE")
     private LocalDate finish;
+
+    @Column(columnDefinition = "DATE")
+    private LocalDate start;
 
     @NotNull
     private String title;
 
-    @ToString.Exclude
     @OneToMany(mappedBy = "sprint", cascade = CascadeType.ALL)
     private List<Task> tasks;
 
-    @ToString.Exclude
-    @ManyToOne(optional = false, cascade = CascadeType.ALL)
-    @JoinColumn(name = "marathon_id")
-    Marathon marathon;
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "marathon_id", referencedColumnName = "id")
+    private Marathon marathon;
 }

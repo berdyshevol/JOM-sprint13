@@ -35,48 +35,23 @@ public class Application {
     }
 
 
-//    public void run(String... args) throws Exception {
-//        System.out.println("Running Spring Boot Application");
-//        try {
-//            for (int i = 0; i < 10; i++) {
-//                User user = new User();
-//                user.setPassword("password1");
-//                user.setRole(User.Role.MENTOR);
-//                user.setFirstName("MentorName" + i);
-//                user.setLastName("MentorSurname" + i);
-//                user.setEmail("mentoruser" + i + "@gmail.com");
-//                userService.createOrUpdateUser(user);
-//            }
-//        }
-//        catch (ConstraintViolationException e) {
-//            System.out.println(e.getMessage());
-//        }
-//        User user = userService.getUserById(1L);
-//        user.setPassword("newPassword");
-//    }
+    public void run(String... args) throws Exception {
+        System.out.println("Running Spring Boot Application");
+        try {
+            for (int i = 0; i < 10; i++) {
+                User user = new User();
+                user.setPassword("password1");
+                user.setRole(User.Role.MENTOR);
+                user.setFirstName("MentorName" + i);
+                user.setLastName("MentorSurname" + i);
+                user.setEmail("mentoruser" + i + "@gmail.com");
+                userService.createOrUpdateUser(user);
+            }
+        }
+        catch (ConstraintViolationException e) {
+            System.out.println(e.getMessage());
+        }
+        User user = userService.getUserById(1L);
+        user.setPassword("newPassword");
+    }
 }
-
-//@Component
-//class ReconTool implements CommandLineRunner {
-//
-//    @Override
-//    public void run(String... args) throws Exception {
-//        System.out.println("Running Spring Boot Application");
-//        try {
-//            for (int i = 0; i < 10; i++) {
-//                User user = new User();
-//                user.setPassword("password1");
-//                user.setRole(User.Role.MENTOR);
-//                user.setFirstName("MentorName" + i);
-//                user.setLastName("MentorSurname" + i);
-//                user.setEmail("mentoruser" + i + "@gmail.com");
-//                userService.createOrUpdateUser(user);
-//            }
-//        }
-//        catch (ConstraintViolationException e) {
-//            System.out.println(e.getMessage());
-//        }
-//        User user = userService.getUserById(1L);
-//        user.setPassword("newPassword");
-//    }
-//}

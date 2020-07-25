@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="JOM-sprint13" target="14" />
+      <module name="JOM-sprint13" target="11" />
       <module name="sprint13" target="11" />
     </bytecodeTargetLevel>
   </component>
