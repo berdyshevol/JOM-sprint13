@@ -1,9 +1,9 @@
 package com.model;
 
-import jdk.jfr.Timestamp;
 import lombok.Data;
 import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -17,10 +17,10 @@ public class Sprint {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Timestamp
+    @UpdateTimestamp
     private LocalDate startDate;
 
-    @Timestamp // TODO: is it right?
+    @UpdateTimestamp // TODO: is it right?
     private LocalDate finish;
 
     @NotNull
