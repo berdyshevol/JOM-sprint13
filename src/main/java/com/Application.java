@@ -5,38 +5,38 @@ import com.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.stereotype.Component;
 
 import javax.validation.ConstraintViolationException;
 
 
-public class Application {
+public class Application implements CommandLineRunner  {
     @Autowired
     private final UserService userService;
-//    private final MarathonService marathonService;
-//    private final SprintService sprintService;
-//    private final TaskService taskService;
-//    private final ProgressService progressService;
-
-//    public Application(UserService userService, MarathonService marathonService, SprintService sprintService, TaskService taskService, ProgressService progressService) {
-    public Application(UserService userService) {
+    @Autowired
+    private final MarathonService marathonService;
+    @Autowired
+    private final SprintService sprintService;
+    @Autowired
+    private final TaskService taskService;
+    @Autowired
+    private final ProgressService progressService;
+    @Autowired
+    public Application(UserService userService, MarathonService marathonService, SprintService sprintService, TaskService taskService, ProgressService progressService) {
+//    public Application(UserService userService) {
        this.userService = userService;
-//        this.marathonService = marathonService;
-//        this.sprintService = sprintService;
-//        this.taskService = taskService;
-//        this.progressService = progressService;
+        this.marathonService = marathonService;
+        this.sprintService = sprintService;
+        this.taskService = taskService;
+        this.progressService = progressService;
     }
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
 
-
-    public void run(String... args) throws Exception {
-        System.out.println("Running Spring Boot Application");
+    @Override
+    public void run(String... args) {
+        System.out.println("------------------------------Running Spring Boot Application");
         try {
             for (int i = 0; i < 10; i++) {
                 User user = new User();

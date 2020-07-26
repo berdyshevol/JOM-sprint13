@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="marathon@localhost" uuid="1dc73d04-1c7a-4b22-bff2-6fd1cb618807">
+    <data-source source="LOCAL" name="JOM-sprint13/Hibernate" uuid="dd91cc53-ccf0-46bc-aec2-635044f89450">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate</remarks>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/marathon</jdbc-url>
     </data-source>
