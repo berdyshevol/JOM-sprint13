@@ -28,7 +28,7 @@ public class User {
     @Size(min = 2, max = 20, message = "Last name must be between 2 and 20 charecters")
     private String lastName;
 
-    @Column(unique = true)
+//    @Column(unique = true)
     @NotNull
     @Pattern(regexp=".+@.+\\..+", message="Please provide a valid email address")
     private String email;

@@ -8,8 +8,8 @@ import java.util.List;
 
 @Repository
 public interface MarathonRepository extends JpaRepository<Marathon, Long> {
-    List<Marathon> getAll();
-    Marathon getMarathonById(Long id);
-    Marathon createOrUpdate(Marathon marathon);
-    void deleteMarathonById(Long id);
+//    List<Marathon> getAll();
+//    Marathon getMarathonById(Long id);
+//    Marathon createOrUpdate(Marathon marathon);
+//    void deleteMarathonById(Long id);
 }

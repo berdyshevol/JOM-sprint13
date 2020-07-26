@@ -10,10 +10,10 @@ import java.util.List;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-    List<User> getAll();
-    User getUserById(Long id);
-    User createOrUpdateUser(User user);
+//    List<User> getAll();
+//    User getUserById(Long id);
+//    User createOrUpdateUser(User user);
     List<User> getAllByRole(User.Role role);
-    boolean addUserToMarathon(User user, Marathon marathon);
-    boolean addUserToTask(User user, Task task);
+//    boolean addUserToMarathon(User user, Marathon marathon);
+//    boolean addUserToTask(User user, Task task);
 }

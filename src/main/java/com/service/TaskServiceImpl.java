@@ -3,9 +3,13 @@ package com.service;
 import com.model.Sprint;
 import com.model.Task;
 import com.repository.TaskRepository;
+import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.Optional;
 
+@Service
+@Transactional
 public class TaskServiceImpl implements TaskService {
 
     final private TaskRepository taskRepository;
